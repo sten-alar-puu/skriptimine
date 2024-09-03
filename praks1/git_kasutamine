@@ -22,4 +22,9 @@ e) git remote add nimi github:address
 git remote add skriptimine git@github.com:sten-alar-puu/skriptimine.git
 
 f) git remote kontroll
-git remote v
+git remote -v
+
+põhikasutamine:
+
+g) pane faili järgmisiele:
+git add filinimi
