@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#!/bin/bash
+
+# küsib kasutajalt täisarvu
+read -p "Sisesta täisarv: " number
+
+# kontrollib kas arv on paaris või paaritu
+if (( number % 2 == 0 )); then
+    echo "Sisestatud arv on paaris."
+else
+    echo "Sisestatud arv on paaritu."
+fi
