@@ -1,13 +1,12 @@
 echo ""
 
-# kuu, aasta ja päev
+#Kuu, aasta ja päev
 date +"%B %Y %D"
 
-# kellaaeg
+#Kellaaeg
 date +"Time is %H:%M"
 
 echo ""
 
-# kalender
-date +"Calendar of %B %Y"
+date +"Calendar of %B %
 cal | tail -n 7
