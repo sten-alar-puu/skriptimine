@@ -1,0 +1,6 @@
+echo ""
+date +"%B %Y %D"
+date +"Time is %H:%M"
+echo ""
+date +"Calendar of %B %Y"
+cal | tail -n 7
