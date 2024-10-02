@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Kontrolli, kas on antud fail parameetrina
+if [ $# -ne 1 ]; then
+    echo "Palun sisestage faili nimi parameetrina."
+    exit 1
+fi
+
+fail=$1
+
+# Eesnimed, perenimed ja domeenid
+cut -d',' -f2 "$fail" | cut -d';' -f1 | tr '[:upper:]' '[:lower:]' > eesnimed.txt
+cut -d':' -f2 "$fail" | cut -d',' -f1 | tr '[:upper:]' '[:lower:]' > perenimed.txt
+cut -d'-' -f2 "$fail" | cut -d';' -f1 > domeenid.txt
+
+# Loo kasutajad fail
+paste -d '.' eesnimed.txt perenimed.txt > kasutajad.txt
+
+# Loo e-mailid fail
+paste -d '@' kasutajad.txt domeenid.txt > meilid.txt
+
+# Output
+echo "Kasutajad ja meilid on loodud."
