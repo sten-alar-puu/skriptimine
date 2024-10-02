@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Skript tervitab sisselogitud kasutajat ja väljastab jooksva kuupäeva ning kellaaja.
+
+# Tervitus
+echo "Tere, $(whoami)!"
+
+# Kuupäev ja kellaaeg kujul "Täna on DD.MM.YYYY kell HH:MM"
+kuupaev=$(date +"%d.%m.%Y")
+kell=$(date +"%H:%M")
+echo "Täna on $kuupaev kell $kell"

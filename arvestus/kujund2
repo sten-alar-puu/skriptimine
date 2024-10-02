@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Kasutajalt küsitakse kujundi ridade arv ja trükitakse peegeldatud kolmnurk.
+
+# Kasutajalt ridade arvu küsimine
+read -p "Sisesta ridade arv: " ridade_arv
+
+# Kujundi trükkimine
+for ((i=ridade_arv; i>0; i--))
+do
+    # Vasakpoolse kolmnurga printimine
+    for ((j=1; j<=i; j++))
+    do
+        echo -n "* "
+    done
+
+    # Tühiku lisamine keskele
+    for ((k=(ridade_arv - i)*2; k>0; k--))
+    do
+        echo -n "  "
+    done
+
+    # Parempoolse kolmnurga printimine
+    for ((j=1; j<=i; j++))
+    do
+        echo -n "* "
+    done
+
+    echo
+done
